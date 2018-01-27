@@ -1,0 +1,29 @@
+html,
+body {
+    background-color: black;
+    color: white;
+}
+
+.squares {
+    position: relative;
+    perspective: 500px;
+    width: 200px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.squares>div {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+#board {
+    margin-top: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}

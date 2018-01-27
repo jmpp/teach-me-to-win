@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +7,28 @@
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <style>
-        .squares {
-            position: relative;
-            perspective: 500px;
-            width: 200px;
-            height: 350px;
-            margin: 0 auto;
-        }
-        .squares > div {
-            position: absolute;
-            top: 0;
-            width: 200px;
-            height: 200px;
-            margin: 0 auto;
-        }
+    <link rel="stylesheet" href="styles/main.css">
 
-        #board {
-            margin-top: 1.5rem;
-        }
-    </style>
-
-    <title>Phase 2</title>
+    <title>Teach Me To Win</title>
 </head>
 <body>
 
-    <main class="container">
-
+    <section id="phase-one" class="container hidden">
         <hr>
+        <h1>Phase 1 : Observation</h1>
+        <hr>
+
+        <div id="board">
+        </div>
+    </section>
+
+    <!-- ================================================= -->
+
+    <section id="phase-two" class="container">
         <h1>Phase 2 : Apprentissage</h1>
         <hr>
 
-        <section class="card" id="explaination">
+        <div class="card" id="explaination">
             <div class="card-header">
                 Raté !
             </div>
@@ -47,39 +37,30 @@
                 <p>A vous de lui enseigner l'art du déplacement ! Appuyez sur le bouton correspondant à l'action de la couleur !</p>
                 <p class="text-center"><button class="btn btn-lg btn-primary" id="understand-btn">J'ai compris !</button></p>
             </div>
-        </section>
+        </div><!-- #explaination -->
 
-        <section id="board">
-            
+        <div id="board">
             <div class="squares">
                 <div style="background-color: #66ff00; top: 0px; transform: translateZ(0px)"></div>
                 <div style="background-color: #ffff00; top: 20px; transform: translateZ(40px)"></div>
                 <div style="background-color: #ffaa00; top: 40px; transform: translateZ(80px)"></div>
                 <div style="background-color: #ff4400; top: 60px; transform: translateZ(120px)"></div>
                 <div style="background-color: #ff0000; top: 80px; transform: translateZ(160px)"></div>
-            </div>
+            </div><!-- .squares -->
 
             <div class="actions alert alert-light text-center">
                 <h2>À quelle direction correspond cette couleur ?</h2>
                 <hr>
                 <button class="btn btn-lg btn-default"><i class="fa fa-chevron-left"></i> Gauche</button>
                 <button class="btn btn-lg btn-default">Droite <i class="fa fa-chevron-right"></i></button>
-            </div>
+            </div><!-- .actions -->
+        </div><!-- #board -->
+    </section>
 
-        </section>
-
-    </main>
-
+    <script src="node_modules/phaser/build/phaser.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script>
-        (function() {
-            'use strict';
-
-            $('#understand-btn').on('click', function() {
-                $('#explaination').slideUp();
-            });
-        })();
-    </script>
+    <script src="scripts/phase-one.js"></script>
+    <script src="scripts/phase-two.js"></script>
 
 </body>
 </html>
