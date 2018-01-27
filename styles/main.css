@@ -20,7 +20,12 @@ body {
     margin: 0 auto;
 }
 
+#phase-one {
+    text-align: center;
+}
+
 #board {
+    display: inline-block;
     margin-top: 1.5rem;
 }
 
