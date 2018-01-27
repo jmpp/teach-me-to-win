@@ -2,6 +2,14 @@ html,
 body {
     background-color: black;
     color: white;
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+h1, h2, h3 {
 }
 
 .squares {
@@ -20,13 +28,11 @@ body {
     margin: 0 auto;
 }
 
-#phase-one {
-    text-align: center;
-}
-
 #board {
-    display: inline-block;
-    margin-top: 1.5rem;
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    width: 1280px;
+    height: 720px;
 }
 
 .hidden {
