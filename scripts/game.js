@@ -198,7 +198,6 @@
 
     function collidePlayerWalls(player, wall) {
         console.warn('COLLISION ! YOU LOOSE');
-
         app.game.state.restart();
     }
 
@@ -206,7 +205,6 @@
 
         if (trigger.color === 'destination') {
             // WIN !!!
-            app.game.state.destroy();
             console.info('YOU WIN !');
         }
 
